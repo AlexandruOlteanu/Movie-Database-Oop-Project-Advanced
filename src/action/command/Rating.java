@@ -52,7 +52,7 @@ public class Rating {
         boolean alreadyRated = userDTO.getRatedMovies().stream()
                 .anyMatch(movie -> movie.equals(actionDTO.getTitle()));
         if (alreadyRated) {
-
+            // TODO
         } else {
             MovieDTO.rateMovie(database.getDatabase().getMovies(), actionDTO.getTitle(), actionDTO.getGrade());
             return Writer.writeFile(actionDTO.getAction_id(), null, "success -> " + actionDTO.getTitle() + " was rated with " + actionDTO.getGrade() + " by " + userDTO.getUsername());
