@@ -5,8 +5,7 @@ import database.ActionDTO;
 import database.Database;
 import org.json.simple.JSONObject;
 
-import static constants.Constants.FAVOURITE;
-import static constants.Constants.VIEW;
+import static constants.Constants.*;
 
 public class Command implements Action {
 
@@ -15,7 +14,8 @@ public class Command implements Action {
         return switch (action.getType()) {
             case FAVOURITE -> Favourite.solveAction(database, action);
             case VIEW -> View.solveAction(database, action);
-            default -> new JSONObject();
+            case RATING -> Rating.solveAction(database, action);
+            default -> throw new IllegalStateException("Unexpected value: " + action.getType());
         };
     }
 }

@@ -78,4 +78,6 @@ public final class Constants {
     public static final String COMMAND = "command";
     public static final String FAVOURITE = "favorite";
     public static final String VIEW = "view";
+    public static final String RATING = "rating";
+
 }

@@ -3,13 +3,14 @@ package main;
 import action.Action;
 import action.command.Command;
 import action.query.Query;
+import action.recommendation.Recommendation;
+import database.ActionDTO;
 import database.Database;
 import org.json.simple.JSONArray;
 
 import java.io.IOException;
 
-import static constants.Constants.COMMAND;
-import static constants.Constants.QUERY;
+import static constants.Constants.*;
 
 public class Solver {
 
@@ -30,6 +31,9 @@ public class Solver {
                     break;
                 case QUERY:
                     action = new Query();
+                    break;
+                case RECOMMENDATION:
+                    action = new Recommendation();
                     break;
                 default:
                     action = new Command();

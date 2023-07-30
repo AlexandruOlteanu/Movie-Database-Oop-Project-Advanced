@@ -20,8 +20,8 @@ public class ActionDTO {
     private String sort_type;
     private String criteria;
     private String genre;
-    private int number;
-    private double grade;
-    private int season;
+    private Integer number;
+    private Double grade;
+    private Integer season;
     private FilterDTO filters;
 }
