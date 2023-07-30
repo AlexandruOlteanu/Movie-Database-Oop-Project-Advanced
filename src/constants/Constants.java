@@ -1,4 +1,4 @@
-package common;
+package constants;
 
 /**
  * The class contains the minimum of constants needed.
@@ -52,7 +52,6 @@ public final class Constants {
     public static final String REVIEWS = "reviews";
     public static final String MESSAGE = "message";
     public static final String QUERY = "query";
-    public static final String COMMAND = "command";
     public static final String RECOMMENDATION = "recommendation";
 
     // checker constants
@@ -75,4 +74,7 @@ public final class Constants {
     public static final int MAX_LENGTH = 50;
 
     // add any constants you think you may use
+
+    public static final String COMMAND = "command";
+    public static final String FAVOURITE = "favorite";
 }

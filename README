@@ -14,7 +14,7 @@ We provide the input tests, the logic that parses them and the checker that runs
 * src
    * checker - the checker's sources including the checkstyle necessary files, not to be modified
    * fileio - classes for parsing the input files, not to be modified
-   * common, utils
+   * constants, utils
         * contain utility classes with constants and static methods
         * you can add your own functionality in the existing classes or add new classes as well
    * actor

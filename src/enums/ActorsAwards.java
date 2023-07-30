@@ -1,4 +1,4 @@
-package actor;
+package enums;
 
 /**
  * Awards for actors to be used for queries

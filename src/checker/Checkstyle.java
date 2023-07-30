@@ -1,6 +1,6 @@
 package checker;
 
-import common.Constants;
+import constants.Constants;
 
 import java.io.File;
 import java.io.IOException;

@@ -1624,7 +1624,7 @@
             "action_type": "query",
             "object_type": "actors",
             "number": 16,
-            "filter": {
+            "filters": {
                 "year": null,
                 "genre": null,
                 "words": null,

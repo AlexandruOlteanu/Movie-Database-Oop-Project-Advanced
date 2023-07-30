@@ -1,8 +1,8 @@
 package utils;
 
-import actor.ActorsAwards;
-import common.Constants;
-import entertainment.Genre;
+import enums.ActorsAwards;
+import constants.Constants;
+import enums.Genre;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 

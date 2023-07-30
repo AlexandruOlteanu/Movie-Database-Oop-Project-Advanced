@@ -2,10 +2,10 @@ package main;
 
 import checker.Checkstyle;
 import checker.Checker;
-import common.Constants;
-import fileio.Input;
-import fileio.InputLoader;
-import fileio.Writer;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import constants.Constants;
+import database.Database;
+import writer.Writer;
 import org.json.simple.JSONArray;
 
 import java.io.File;
@@ -58,19 +58,22 @@ public final class Main {
     }
 
     /**
-     * @param filePath1 for input file
-     * @param filePath2 for output file
+     * @param inputFilePath for input file
+     * @param outputFilePath for output file
      * @throws IOException in case of exceptions to reading / writing
      */
-    public static void action(final String filePath1,
-                              final String filePath2) throws IOException {
-        InputLoader inputLoader = new InputLoader(filePath1);
-        Input input = inputLoader.readData();
+    public static void action(final String inputFilePath,
+                              final String outputFilePath) throws IOException {
 
-        Writer fileWriter = new Writer(filePath2);
-        JSONArray arrayResult = new JSONArray();
+        ObjectMapper objectMapper = new ObjectMapper();
 
-        //TODO add here the entry point to your implementation
+        Database database = objectMapper.readValue(new File(inputFilePath), Database.class);
+
+        Writer fileWriter = new Writer(outputFilePath);
+
+        Solver solver = new Solver(database);
+
+        JSONArray arrayResult = solver.solveActions();
 
         fileWriter.closeJSON(arrayResult);
     }

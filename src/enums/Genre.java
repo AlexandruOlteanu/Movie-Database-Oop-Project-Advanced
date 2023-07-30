@@ -1,4 +1,4 @@
-package entertainment;
+package enums;
 
 /**
  * The types of movies/series that will be used in the tests

@@ -2,7 +2,7 @@ package checker;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import common.Constants;
+import constants.Constants;
 
 import java.io.File;
 import java.io.IOException;
