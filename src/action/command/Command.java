@@ -5,19 +5,17 @@ import database.ActionDTO;
 import database.Database;
 import org.json.simple.JSONObject;
 
-import java.io.IOException;
-
 import static constants.Constants.FAVOURITE;
+import static constants.Constants.VIEW;
 
 public class Command implements Action {
 
     @Override
     public JSONObject solveAction(Database database, ActionDTO action) throws Exception {
-        switch (action.getType()) {
-            case FAVOURITE:
-                return Favourite.solveAction(database, action);
-            default:
-                return new JSONObject();
-        }
+        return switch (action.getType()) {
+            case FAVOURITE -> Favourite.solveAction(database, action);
+            case VIEW -> View.solveAction(database, action);
+            default -> new JSONObject();
+        };
     }
 }

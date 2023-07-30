@@ -33,9 +33,7 @@ public class Favourite {
             return Writer.writeFile(actionDTO.getAction_id(), null, "error -> " + actionDTO.getTitle() + " is already in favourite list");
         }
 
-        JSONObject jsonObject = Writer.writeFile(actionDTO.getAction_id(), null, "success");
-
-        return jsonObject;
+        return Writer.writeFile(actionDTO.getAction_id(), null, "success -> " + actionDTO.getTitle() + " was added as favourite");
     }
 
 }

@@ -1,12 +1,14 @@
 package database;
 
 import lombok.*;
+import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 
-@Data
+@Builder
 @Getter
 @Setter
+@Jacksonized
 public class ActionDTO {
     private Integer action_id;
     private String action_type;
